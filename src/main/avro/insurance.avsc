@@ -1,0 +1,48 @@
+{
+    "type": "record",
+    "name": "Insurance",
+    "namespace": "pe.com.zalag.model",
+    "doc": "Insurance is a record that represents a insurance",
+    "fields": [
+        {
+            "name": "policeNumber",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "holderNumber",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "type",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "coverage",
+            "type": [
+                "null",
+                "double"
+            ],
+            "default": null
+        },
+        {
+            "name": "active",
+            "type": [
+                "null",
+                "boolean"
+            ],
+            "default": null
+        }
+    ]
+}

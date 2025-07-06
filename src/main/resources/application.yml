@@ -1,0 +1,30 @@
+quarkus:
+  package:
+    jar:
+      enabled: true
+  http:
+    port: 9070
+    test-port: 0
+  devservices:
+    enabled: false
+  kafka:
+    devservice:
+      enabled: false
+
+mp:
+  messaging:
+    outgoing:
+      insurance-emitter:
+        connector: smallrye-kafka
+        topic: insurance-topic
+        bootstrap:
+          servers: ${CONFIG_KAFKA_BROKERS:PLAINTEXT://localhost:19092 #,PLAINTEXT://localhost:29092}
+        schema:
+          registry:
+            url: ${CONFIG_SCHEMA_REGISTRY_URL:http://localhost:8081}
+        auto:
+          register:
+            schemas: true # Utilizarlo solo en Desarrollo o local
+        use:
+          latest:
+            version: true
